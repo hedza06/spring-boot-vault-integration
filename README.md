@@ -14,7 +14,7 @@ services, credentials for service-oriented architecture communication, etc. It c
 accessing which secrets, especially since this can be platform-specific. Adding on key rolling, secure storage, and 
 detailed audit logs is almost impossible without a custom solution. This is where Vault steps in.
 
-### Running the service
+### Running Vault in Docker Container
 1. Change directory to `docker` by running the following command: `cd docker`
 2. Run command: `docker-compose up -d`. This command will bootstrap the Vault Server. 
 Vault server will be running on port 8200 on local address.
@@ -30,6 +30,9 @@ Third command is **important** because you are setting datasource credentials th
 you have to put all datasource properties with your own values.
 
 Run the project and check your console.
+
+**NOTE**: Do not run Vault in production before you check production hardening: 
+https://learn.hashicorp.com/tutorials/vault/production-hardening
 
 ### Contribution
 If someone is interested for contribution or have some suggestions please contact me on e-mail _hedzaprog@gmail.com_. 
