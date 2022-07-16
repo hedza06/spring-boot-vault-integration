@@ -7,12 +7,15 @@ services:
       - "8200:8200"
     volumes:
       - ./vault/config:/vault/config
-      - ./vault/policies:/vault/policies
       - ./vault/data:/vault/data
       - ./vault/logs:/vault/logs
     container_name: vault
-    env_file:
-      - .secrets
+    environment:
+      TZ: Europe/Podgorica
+      VAULT_ADDR: http://0.0.0.0:8200
+    cap_add:
+      - IPC_LOCK
+    # command: vault server -config=/vault/config/config.hcl
     networks:
       - vaultnet
 
