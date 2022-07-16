@@ -1,0 +1,20 @@
+version: '3.2'
+
+services:
+  vault:
+    image: vault
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./vault/config:/vault/config
+      - ./vault/policies:/vault/policies
+      - ./vault/data:/vault/data
+      - ./vault/logs:/vault/logs
+    container_name: vault
+    env_file:
+      - .secrets
+    networks:
+      - vaultnet
+
+networks:
+  vaultnet:
