@@ -37,6 +37,12 @@ https://learn.hashicorp.com/tutorials/vault/production-hardening
 ### Contribution
 If someone is interested for contribution or have some suggestions please contact me on e-mail _hedzaprog@gmail.com_. 
 
+### Next to come...
+Here are the few things that are coming soon:  
+- Vault authentication using certificates 
+- Setting up self-signed certificate on Vault (enabling HTTPS)
+- Enable permanent storage for Vault
+
 ### Author
 Heril Muratović   
 Software Engineer  
