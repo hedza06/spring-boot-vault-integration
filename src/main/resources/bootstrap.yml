@@ -4,6 +4,6 @@ spring:
   cloud:
     vault:
       uri: http://localhost:8200
-      token: hvs.kfbQQwCpjHvuIzik6WUGNIl9
+      token: token-here
       schema: http
       kv.enabled: true
